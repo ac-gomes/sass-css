@@ -1,0 +1,103 @@
+body {
+  background-color: #7159c1;
+  color: orange;
+}
+
+.container {
+  -webkit-box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.6);
+  /* esta variavel sobrescreveu a variavel do escopo global com mesmo nome*/
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  color: blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+.container .test1 {
+  -webkit-box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.6);
+  position: relative;
+  top: 15%;
+  left: 25%;
+  background-color: grey;
+  height: 100px;
+  width: 100px;
+  color: blue;
+  text-align: center;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+}
+
+/*arrey*/
+.text-1 {
+  font-size: 15px;
+}
+
+.text-2 {
+  font-size: 30px;
+}
+
+.text-3 {
+  font-size: 45px;
+}
+
+.text-4 {
+  font-size: 60px;
+}
+
+.text-5 {
+  font-size: 75px;
+}
+
+.blue-text {
+  color: #3333ff;
+}
+
+.green-text {
+  color: #00b300;
+}
+
+.yellow-text {
+  color: #ffff33;
+}
+
+.container2 {
+  background-color: white;
+}
+
+p {
+  cursor: pointer;
+}
+
+p:hover {
+  color: blue;
+}
+
+.flex, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */

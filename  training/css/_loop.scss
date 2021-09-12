@@ -1,0 +1,24 @@
+
+/*arrey*/
+$colors:(color1:blue, color2: green, color3: yellow);
+
+@for $i from 1 through 5 {
+  .text-#{$i} {
+    font-size: 15px * $i;
+  }
+}
+
+@each $key, $color in $colors {
+  .#{$color}-text {color: lighten($color, 10)}
+}
+
+.container2 {
+  background-color:white;
+}
+p {
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
+}

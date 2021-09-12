@@ -1,0 +1,57 @@
+$text-color: orange;
+
+@mixin box-shadow($color) {
+  box-shadow: 3px 3px 4px -1px $color;
+}
+
+@mixin make-bold($boolean) {
+  @if $boolean == true {
+    font-weight: bold;
+  }
+}
+
+@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+    font-size: 18px;
+  }
+  @else if $val == alert {
+    color: yellow;
+  }
+  @else {
+    color: black
+  }
+}
+
+body {
+  background-color:#7159c1;
+  color: $text-color;
+}
+
+.container {
+  @include box-shadow(rgba(0,0,0,0.6));
+  /* esta variavel sobrescreveu a variavel do escopo global com mesmo nome*/
+  $text-color:blue;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  color: $text-color;
+  justify-content: center;
+  margin-bottom: 10px;
+  .test1 {
+    @include box-shadow(rgba(0,0,0,0.6));
+    position: relative;
+    top: 15%;
+    left: 25%;
+    background-color:grey;
+    height: 100px;
+    width: 100px;
+    color: $text-color;
+    text-align: center;
+    line-height: 100px;
+    text-align:center;
+    vertical-align: middle;
+    @include make-bold(true);
+    @include text-effect(danger);
+  }
+}
